@@ -17,7 +17,7 @@ export default function Home() {
           all your needs
         </Typography>
         <Typography className="max-w-2xl" variant="h5">
-          PetCare Tracker ensures you have all the
+          PawPet App ensures you have all the
           information you need during emergencies and
           routine check-ups, seamlessly linked to past
           records and solutions.
