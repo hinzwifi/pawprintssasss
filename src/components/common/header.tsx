@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { usePathname } from 'next/navigation'
 import Typography from '@/components/ui/typography'
 import {
   Drawer,
@@ -17,41 +16,21 @@ interface SidebarProps
   extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Header({ className }: SidebarProps) {
-  const pathname = usePathname()
-  const items = [
-    {
-      href: 'https://map.sistilli.dev/public/coding/SaaS+Boilerplate',
-      title: 'Book a demo',
-      openInNewTab: true
-    }
-    // { href: '#pricing', title: 'Features' },
-    // {
-    //   href: 'mailto:myemail@.com',
-    //   title: 'Contact Us'
-    // }
-  ]
-
   const getLogo = () => (
     <Link href="/" className="pointer flex items-center">
       <img src="/logo.svg" className="mr-3" />
       <Typography className="!text-white !text-base font-medium ">
-        Pandem
+        PawPrints
       </Typography>
     </Link>
   )
 
   const getAuthButtons = () => (
     <div className="flex gap-3 items-center">
-      <Link
-        href="https://map.sistilli.dev/public/coding/SaaS+Boilerplate"
-        target="_blank"
-      >
+      <Link href="https://hinzwifi.xyz" target="_blank">
         <Typography variant="p">Login</Typography>
       </Link>
-      <Link
-        href="https://map.sistilli.dev/public/coding/SaaS+Boilerplate"
-        target="_blank"
-      >
+      <Link href="https://hinzwifi.xyz" target="_blank">
         <Button size="tiny" color="ghost">
           <Typography variant="p" className="text-black">
             Sign Up
@@ -64,7 +43,7 @@ export function Header({ className }: SidebarProps) {
   const getHeaderItems = () => {
     return (
       <>
-        {items.map((item) => {
+        {/* {items.map((item) => {
           const selected =
             pathname === item.href ||
             pathname.includes(item.href)
@@ -83,7 +62,7 @@ export function Header({ className }: SidebarProps) {
               </Typography>
             </Link>
           )
-        })}
+        })} */}
       </>
     )
   }
